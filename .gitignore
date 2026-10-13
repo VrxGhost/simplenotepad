@@ -2,9 +2,8 @@
 node_modules/
 
 # personal notes created by the app
-# the folder itself is kept via .gitkeep so the app still works after cloning
-files/*
-!files/.gitkeep
+# (index.js creates this folder on startup)
+files/
 
 # environment variables
 .env

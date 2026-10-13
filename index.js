@@ -3,6 +3,9 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 
+// make sure the notes folder exists (it's not in git)
+fs.mkdirSync('./files', { recursive: true });
+
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')))
