@@ -1,0 +1,17 @@
+# dependencies (reinstall with `npm install`)
+node_modules/
+
+# personal notes created by the app
+# the folder itself is kept via .gitkeep so the app still works after cloning
+files/*
+!files/.gitkeep
+
+# environment variables
+.env
+
+# logs
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
