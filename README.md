@@ -1,15 +1,13 @@
-# Notes App
+# Simple Notepad
 
-A simple notes app built with Node.js, Express and EJS. There is no database: each note is saved as a `.txt` file using Node's built-in `fs` module.
-
-Built while following the [Sheryians Coding School](https://www.youtube.com/@sheryians) backend development series.
+A lightweight notes app built with Node.js, Express and EJS. There is no database: every note is saved as a plain `.txt` file on the server using Node's built-in `fs` module.
 
 ## Features
 
 - Create a note with a title and details
-- See all your notes as cards on the home page
-- Open a note to read its full content
-- Dark UI styled with Tailwind CSS
+- Browse all your notes as cards on the home page
+- Open any note to read its full content
+- Clean dark UI styled with Tailwind CSS
 
 ## Tech Stack
 
@@ -20,17 +18,17 @@ Built while following the [Sheryians Coding School](https://www.youtube.com/@she
 
 ## How It Works
 
-| Route              | Method | What it does                                                     |
-| ------------------ | ------ | ---------------------------------------------------------------- |
-| `/`                | GET    | Reads the `files` folder with `fs.readdir` and lists every note  |
-| `/create`          | POST   | Saves a new note as `files/<TitleWithoutSpaces>.txt`             |
-| `/file/:filename`  | GET    | Reads that note with `fs.readFile` and shows it on its own page  |
+| Route             | Method | What it does                                                    |
+| ----------------- | ------ | --------------------------------------------------------------- |
+| `/`               | GET    | Reads the `files` folder with `fs.readdir` and lists every note |
+| `/create`         | POST   | Saves a new note as `files/<TitleWithoutSpaces>.txt`            |
+| `/file/:filename` | GET    | Reads that note with `fs.readFile` and shows it on its own page |
 
 ## Getting Started
 
 ```bash
-git clone <your-repo-url>
-cd <repo-folder>
+git clone https://github.com/VrxGhost/simplenotepad.git
+cd simplenotepad
 npm install
 node index.js
 ```
@@ -58,3 +56,9 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 - Using route params (`req.params`) to build dynamic pages
 - Working with the file system using `fs.readdir`, `fs.readFile` and `fs.writeFile`
 - Passing data from the backend to EJS and looping over it with `forEach`
+
+## Future Improvements
+
+- Edit and delete notes
+- Validate file names to keep reads inside the `files` folder
+- Store notes in a database instead of the file system
