@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasks</title>
+    <title>Simple Notepad</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
@@ -12,6 +12,8 @@
 
         <!-- create task form -->
         <div class="p-10">
+            <h1 class="text-white text-5xl font-semibold tracking-tighter">Simple Notepad</h1>
+            <p class="mt-2 mb-8 text-zinc-400">Write a note, save it, and come back to read it anytime.</p>
             <form action="/create" method="post">
                 <input class="block w-full rounded-md outline-none px-5 py-2 bg-zinc-800 text-white" type="text" name="title" placeholder="Title goes here">
                 <textarea class="block w-full resize-none rounded-md outline-none px-5 py-2 mt-2 bg-zinc-800 text-white" name="details" placeholder="Write your task details here"></textarea>
